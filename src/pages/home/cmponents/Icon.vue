@@ -110,42 +110,43 @@ export default {
 .icons >>> .swiper-container {
   height: 0;
   padding-bottom: 50%;
-}
+  margin-top: 0.2rem;
 
-.icon {
-  position: relative;
-  float: left;
-  height: 0;
-  width: 25%;
-  padding-bottom: 25%;
+  .icon {
+    position: relative;
+    float: left;
+    height: 0;
+    width: 25%;
+    padding-bottom: 25%;
 
-  .icon-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0.44rem;
+    .icon-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0.44rem;
 
-    .icon-imgcontent {
-      height: 100%;
-      display: block;
-      margin: 0 auto;
+      .icon-imgcontent {
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
-}
 
-.icon-txt {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.44rem;
-  line-height: 0.44rem;
-  text-align: center;
-  font-size: 0.25rem;
-  color: $darkText;
-  ellipsis();
-  width: 0.8rem;
-  margin: 0 auto;
+  .icon-txt {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    text-align: center;
+    font-size: 0.25rem;
+    color: $darkText;
+    ellipsis();
+    width: 0.8rem;
+    margin: 0 auto;
+  }
 }
 </style>
