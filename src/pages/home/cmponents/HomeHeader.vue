@@ -6,10 +6,12 @@
     <div class="header-input">
       <i class="iconfont iconsousuo"></i> 输入城市游玩景点
     </div>
-    <div class="header-right">
-      {{this.city.name}}
-      <i class="iconfont iconjiantouxia"></i>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city.name}}
+        <i class="iconfont iconjiantouxia"></i>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -59,6 +61,7 @@ export default {
     display: flex;
     width: 1.24rem;
     justify-content: center;
+    color: #fff;
 
     .iconjiantouxia {
       padding-left: 0.05rem;
