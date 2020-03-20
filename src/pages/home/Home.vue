@@ -14,12 +14,15 @@ import HomeSwiper from "./cmponents/Swiper";
 import HomeIcons from "./cmponents/Icon";
 import HomeRecommend from "./cmponents/Recommend";
 import HomeWeekend from "./cmponents/Weekend";
-
+import { mapState } from "vuex";
 import axios from "axios";
 export default {
   name: "Home",
   data() {
     return {};
+  },
+  computed: {
+    ...mapState(["city"])
   },
   components: {
     HomeHeader,
