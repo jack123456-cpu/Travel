@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-swiper></home-swiper>
     <home-icons></home-icons>
     <home-recommend></home-recommend>
@@ -19,9 +19,7 @@ import axios from "axios";
 export default {
   name: "Home",
   data() {
-    return {
-      city: {}
-    };
+    return {};
   },
   components: {
     HomeHeader,
@@ -31,20 +29,20 @@ export default {
     HomeWeekend
   },
   mounted() {
-    this.getHomeInfo();
+    // this.getHomeInfo();
   },
   methods: {
-    getHomeInfo() {
-      axios
-        .get("/api/index.json")
-        .then(res => {
-          console.table(res.data.data.hotCities instanceof Array);
-          this.city = res.data.data.hotCities[0];
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }
+    // getHomeInfo() {
+    //   axios
+    //     .get("/api/index.json")
+    //     .then(res => {
+    //       console.table(res.data.data.hotCities instanceof Array);
+    //       this.city = res.data.data.hotCities[0];
+    //     })
+    //     .catch(err => {
+    //       console.log(err);
+    //     });
+    // }
   }
 };
 </script>
