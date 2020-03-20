@@ -2,8 +2,8 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hotCities="hotCities"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-list :cities="cities" :hotCities="hotCities" :zimu="zimu"></city-list>
+    <city-alphabet :cities="cities" @zimuSel="selectZimu"></city-alphabet>
   </div>
 </template>
 <script>
@@ -35,12 +35,16 @@ export default {
         this.cities = data.cities;
         this.hotCities = data.hotCities;
       }
+    },
+    selectZimu(zimu) {
+      this.zimu = zimu;
     }
   },
   data() {
     return {
       hotCities: [],
-      cities: {}
+      cities: {},
+      zimu: ""
     };
   }
 };

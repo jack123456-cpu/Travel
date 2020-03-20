@@ -17,7 +17,8 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item,name) in cities" :key="name">
+
+      <div class="area" v-for="(item,name) in cities" :key="name" :ref="name">
         <div class="title border-topbottom">{{name}}</div>
         <div class="item-list" v-for="item02 in item" :key="item02.id">
           <div class="item border-bottom">{{item02.name}}</div>
@@ -33,10 +34,20 @@ export default {
   name: "CityList",
   props: {
     hotCities: Array,
-    cities: Object
+    cities: Object,
+    zimu: String
   },
   mounted() {
     this.scroll = new BScroll(this.$refs.wrapper);
+    console.log(this.zimu);
+  },
+  watch: {
+    zimu() {
+      if (this.zimu) {
+        this.scroll.scrollToElement(this.$refs[this.zimu][0]);
+      }
+      console.log(this.zimu);
+    }
   }
 };
 </script>
