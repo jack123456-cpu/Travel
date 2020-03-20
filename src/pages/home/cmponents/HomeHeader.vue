@@ -7,7 +7,7 @@
       <i class="iconfont iconsousuo"></i> 输入城市游玩景点
     </div>
     <div class="header-right">
-      城市
+      {{this.city.name}}
       <i class="iconfont iconjiantouxia"></i>
     </div>
   </div>
@@ -15,7 +15,10 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  props: {
+    city: Object
+  }
 };
 </script>
 
